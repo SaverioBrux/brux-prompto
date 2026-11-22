@@ -84,6 +84,29 @@ Here it stops and shows you a map first. One rung up: explain what changed and w
 Two rungs up: prepare the decisions. Three: an at-risk-customer alert, tested on past
 data and run beside the report for a month. You pick the version; it writes that prompt.
 
+## Does it actually help? A side-by-side test
+
+Same model, same messy data, two fresh sessions: one got the plain request ("here are 40
+reviews, tell me what to improve"; "prepare the agenda, here are the emails"), the other
+got the prompt brux-prompto wrote for that request. The data had planted traps (sarcasm,
+a duplicate, an off-topic review, a withdrawn offer, a moved deadline) and a known
+answer. A separate reviewer scored both by hand.
+
+| Measure | Plain request | brux-prompto prompt |
+| --- | --- | --- |
+| Reviews: complaint counts matching the truth | 4/4 | 3/4 |
+| Reviews: counts you can check (review numbers cited) | 0/4 | 4/4 |
+| Reviews: traps handled | 6/7 | 7/7 |
+| Reviews: quotes copied word for word | 20/23 | 16/16 |
+| Agenda: critical points found, traps handled | 7/7, 5/5 | 7/7, 5/5 |
+| Agenda: points that cite the email they come from | 0/4 | 4/4 |
+
+The honest reading: a good model finds the same facts either way, and the plain answer
+even had the single best insight (ratings falling in the last two months). What the
+prompt changes is that every number and every point can be checked against its source,
+so a wrong one gets caught. That is the outside check this skill is built around. One
+run each, synthetic data: a small test, not a benchmark.
+
 ## What it does along the way
 
 - **Looks before it builds.** For anything that gets built, it checks what already
