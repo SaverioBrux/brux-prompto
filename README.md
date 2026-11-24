@@ -10,6 +10,10 @@ fresh chat or give to an agent. Before it writes, it decides how much the task d
 npx skills add SaverioBrux/brux-prompto
 ```
 
+Using the Claude apps instead? Download the zip from the
+[latest release](https://github.com/SaverioBrux/brux-prompto/releases/latest) and upload
+it in the skill settings ([details](#install)).
+
 ## Why I built this
 
 I kept making the same five mistakes, and no prompt guide fixed them, because none of
